@@ -1,3 +1,3 @@
 # VHACK 2024
 
-Currently WIP.
+For a quickstarter guide, please refer to [`QUICKSTART.md`](QUICKSTART.md).
