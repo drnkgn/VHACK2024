@@ -1,0 +1,17 @@
+:root {
+  --header-height: 5em;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+
+body {
+    margin: 0px;
+}
+
+html,
+body {
+    height: 100%;
+}
