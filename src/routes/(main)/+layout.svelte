@@ -8,7 +8,7 @@
     import Link from '$lib/Link.svelte';
 
     const links = [
-        { name: 'products', dropdown: false },
+        { name: 'solutions', dropdown: false },
         { name: 'news', dropdown: false },
         { name: 'about us', dropdown: false },
         { name: 'resources', dropdown: false }
