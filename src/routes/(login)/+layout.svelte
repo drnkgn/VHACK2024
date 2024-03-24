@@ -5,7 +5,13 @@
 
 <Header>
     <HeaderSection position='left'>
-        Crop Management System
+        <span>CropManager</span>
     </HeaderSection>
 </Header>
 <slot />
+
+<style>
+    span {
+        font-weight: bold;
+    }
+</style>

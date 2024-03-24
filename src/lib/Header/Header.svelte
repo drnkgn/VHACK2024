@@ -2,7 +2,7 @@
     export let links;
 </script>
 
-<header>
+<header class='Header'>
     <nav>
         <slot />
     </nav>

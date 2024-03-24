@@ -1,45 +1,30 @@
 <script>
     import { goto } from '$app/navigation';
+
+    import AuthForm from '$lib/Auth/Form.svelte';
+    import Button from '$lib/Button.svelte';
 </script>
 
-<div class='body'>
-    <div class='panel'>
-        <h1>Log In</h1>
-        <form>
-            <input type='email' placeholder='Email' />
-            <input type='password' placeholder='Password' />
-            <button>Log In</button>
-        </form>
-        <p>or</p>
-        <div>
-            <button
-                on:click={() => {
-                    goto('/signup');
-                }}
-            >
-                Create Account
-            </button>
-        </div>
+<AuthForm>
+    <h1>Log In</h1>
+    <div>
+        <input type='email' placeholder='Email' />
+        <input type='password' placeholder='Password' />
+        <Button mode='light'>Log In</Button>
     </div>
-</div>
+    <p>or</p>
+    <div>
+        <Button
+            to='/signup'
+            mode='dark'
+        >
+            Create Account
+        </Button>
+    </div>
+</AuthForm>
 
 <style>
-    .body {
-        display: flex;
-        width: 100%;
-        height: calc(100% - var(--header-height));
-        justify-content: center;
-        align-items: center;
-    }
-
-    .panel {
-        width: 25em;
-        padding: 1em;
-        border-radius: 0.5em;
-        box-shadow: 0px 0px 5px gray;
-    }
-
-    form {
+    div {
         display: flex;
         flex-direction: column;
     }
@@ -53,9 +38,14 @@
     }
 
     input,
-    button {
+    div > :global(.Button) {
         width: 100%;
         margin: 8px 0px;
-        height: 30px;
+        height: 40px;
+    }
+
+    div > :global(.Button) {
+        font-size: inherit;
+        padding: 0px;
     }
 </style>
