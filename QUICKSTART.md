@@ -1,5 +1,0 @@
-# Quickstart
-
-![FUMO](misc/fumo.gif)
-
-HEHEHEHEHEHEHEHEHEHEHEHEHEHEHEHEHE
