@@ -8,18 +8,7 @@
     import Link from '$lib/Link.svelte';
 
     const links = [
-        { 
-            name: 'products',
-            dropdown: true,
-            items: [
-                'Crop Protection',
-                'Seeds & Traits',
-                'Biologicals',
-                'Digital Solutions',
-                'Seed Treatments',
-                'Forages',
-            ]
-        },
+        { name: 'products', dropdown: false },
         { name: 'news', dropdown: false },
         { name: 'about us', dropdown: false },
         { name: 'resources', dropdown: false }
@@ -61,7 +50,6 @@
         <Button to='/login' mode='dark'>Log In</Button>
     </HeaderSection>
 </Header>
-<Dropdown show={showDropdown} items={links[currentActive].items} />
 <slot />
 <Footer />
 
