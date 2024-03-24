@@ -8,7 +8,7 @@
     on:mouseenter={mouse != null ? mouse.enter : null}
     on:mouseleave={mouse != null ? mouse.leave : null}
 >
-    <a href={to}><slot /></a>
+    <a href='/solutions'><slot /></a>
     {#if underline}
     <div class='link-line' />
     {/if}
