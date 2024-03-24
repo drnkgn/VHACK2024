@@ -3,22 +3,12 @@
     import HeaderSection from '$lib/Header/Section.svelte';
     import Dropdown from '$lib/Header/Dropdown.svelte';
     import Footer from '$lib/Header/Footer.svelte';
+    import Button from '$lib/Button.svelte';
 
     import Link from '$lib/Link.svelte';
 
     const links = [
-        { 
-            name: 'products',
-            dropdown: true,
-            items: [
-                'Crop Protection',
-                'Seeds & Traits',
-                'Biologicals',
-                'Digital Solutions',
-                'Seed Treatments',
-                'Forages',
-            ]
-        },
+        { name: 'products', dropdown: false },
         { name: 'news', dropdown: false },
         { name: 'about us', dropdown: false },
         { name: 'resources', dropdown: false }
@@ -30,7 +20,7 @@
 
 <Header>
     <HeaderSection position='left'>
-        Crop Management System
+        <span>CropManager</span>
     </HeaderSection>
     <HeaderSection position='mid'>
     {#each links as link, index}
@@ -57,17 +47,25 @@
     {/each}
     </HeaderSection>
     <HeaderSection position='right'>
-        <a>Get Started</a>
-        <a href='/login'>Log In</a>
+        <Button to='/login' mode='dark'>Log In</Button>
     </HeaderSection>
 </Header>
-<Dropdown show={showDropdown} items={links[currentActive].items} />
 <slot />
 <Footer />
 
 <style>
+    span {
+        font-weight: bold;
+    }
+
     a {
-        border: 1px gray solid;
-        margin: 0.5em;
+        font-weight: bold;
+        color: white;
+        padding: 0.5em;
+        background: black;
+    }
+
+    :global(.Link-Text) {
+        color: black;
     }
 </style>

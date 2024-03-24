@@ -3,14 +3,14 @@
 </script>
 
 <span
-    class='link'
+    class='Link'
     style={styles}
     on:mouseenter={mouse != null ? mouse.enter : null}
     on:mouseleave={mouse != null ? mouse.leave : null}
 >
-    <a href='/solutions'><slot /></a>
+    <a class='Link-Text' href={to}><slot /></a>
     {#if underline}
-    <div class='link-line' />
+    <div class='Link-Line' />
     {/if}
 </span>
 
@@ -20,11 +20,20 @@
         text-transform: capitalize;
     }
 
-    .link:hover .link-line {
+    .Link {
+        display: inline-block;
+        width: fit-content;
+    }
+
+    .Link:hover .Link-Line {
         width: 100%;
     }
 
-    .link-line {
+    .Link-Text {
+        white-space: nowrap;
+    }
+
+    .Link-Line {
         width: 0%;
         border-bottom: 1px black solid;
         transition: width 0.3s ease-in-out;
